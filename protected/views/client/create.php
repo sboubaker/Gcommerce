@@ -1,0 +1,23 @@
+<?php
+$this->breadcrumbs=array(
+	'Clients'=>array('index'),
+	'Create',
+);
+
+$this->menu=array(
+	array('label'=>'Les Client', 'url'=>array('client/admin')),
+	array('label'=>'Nouveau Client', 'url'=>array('client/create')),
+	array('label'=>'Les reglements client', 'url'=>array('reglementClient/admin')),
+	array('label'=>'Nouveau reglement client', 'url'=>array('reglementClient/create')),
+);
+?>
+
+<div class="page-header">
+<h2>Nouveau clients</h2>
+</div>
+
+<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+
+<script>
+document.getElementById("section").innerHTML ="Clients";
+</script>
